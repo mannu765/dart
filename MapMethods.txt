@@ -1,0 +1,68 @@
+void main() {
+//   var words = {
+//     1: 'sky',
+//     2: 'fly',
+//     3: 'ribbon',
+//     4: 'falcon',
+//     5: 'rock',
+//     6: 'ocean',
+//     7: 'cloud'
+//   };
+   
+//   words[8]="skies";
+//   words.remove(1);
+//   print(words);
+  
+//   print(words.isEmpty);
+  
+
+//   words.removeWhere((key, value) => value.startsWith('f'));
+//   print(words);
+
+//   words.clear();
+//   print(words);
+  
+//   var a=['I','II','III'];
+//   var b=[1,2,3];
+  
+//   var c= Map<String, int>.fromIterables(a,b);
+//   print(c);
+  
+  
+//   var words = ['sky', 'cloud', 'sod', 'worm', 'put', 'water', 'cup'];
+
+//   var i=0;
+//   var a={
+//     for (var j in words)
+//       if(j.length==3)
+//         i++:j
+//   };
+//   print(a);
+  
+//   var f1 = {1: 'Apple', 2: 'Orange'};
+//   var f2 = {3: 'Banana'};
+//   var f3 = {4: 'Mango'};
+  
+//   var f4={...f1,...f2,...f3};
+  
+//   print(f4);
+  
+//   var f5={}..addAll(f1)..addAll(f2)..addAll(f3);
+//   print(f5);
+  
+//   print(f1.containsValue('Apple'));
+  
+//   var fruit = {1: 'Apple', 2: 'Banana', 3: 'Cherry', 4: 'Orange'};
+  
+//   fruit.forEach((key,value){
+//     print('{key: $key, value: $value}');
+//   });
+//   print('--------------------------');
+//   fruit.entries.forEach((e){
+//     print('{key: ${e.key}, value: ${e.value} }');
+//   });
+  
+  
+  
+  
+}
