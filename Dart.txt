@@ -1,0 +1,45 @@
+void main(){
+  
+//   List<int> list=[1,2,3,4,5,6,7,8,9,10];
+//   List<String> list1=["manish","bhupendra","huzaifa","mustafa"];
+
+//   print("Sublist ${list.sublist(1,4)}");
+//   list.shuffle();
+//   print("shuffle ${list}");
+//   print("reverse ${list.reversed.toList()}");
+  
+//   Map<int,String> map=list1.asMap();
+//   print(map);
+  
+//    var list3=[1,2,3,"manish","bhupendra",4];
+//   var a=list3.whereType<String>();
+//   print(a);
+  
+//   var rList= [0,1,2,3,4,5,6];
+//  rList.replaceRange(2,4, [10]);
+//  print('$rList');
+  
+//   var list = [1,2,3,4,5,6];
+//  print(list.firstWhere((i) => i > 3));
+//   print(list.singleWhere((i)=> i ==4));
+//   var lst = [1,2,3,4,5];
+//  var res = lst.fold(5, (i, j) {
+//    print(i);
+//    print(j);
+//    return i+j;
+//  } );
+//  print('res is ${res}');
+  
+  
+//    var lst = [1,2,3,4,5];
+//  var res = lst.reduce((i, j) => i + j);
+//  print('res is ${res}');
+  
+//   var list=["manish","huzaifa", "mustafa"];
+//   var list2=["mamta", "crazy","people"];
+//   var list3=list.followedBy(list2);
+  
+//   print(list3);
+//   print(list3.any((i)=>i.contains("mamta")));
+  
+}
