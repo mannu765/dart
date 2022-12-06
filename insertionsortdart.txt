@@ -5,15 +5,15 @@ void main(){
   
   
 }
-List<int> isort(List<int> b)
+List<int> isort(List<int> a)
 {
-  int i;
-  List<int> a=b;
-  for (i=1;i<a.length;i++)
+  
+  
+  for (int i=1;i<a.length;i++)
   {
     var temp=a[i];
     var j=i-1;
-    while(a.length>=0 && a[j]>temp)
+    while(j>=0 && a[j]>temp)
     {
       a[j+1]=a[j];
       j=j-1;
