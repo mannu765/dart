@@ -1,0 +1,26 @@
+// Insertion sort
+void main(){
+  print(isort([5,4,10,1,6,2]));
+  
+  
+  
+}
+List<int> isort(List<int> b)
+{
+  int i;
+  List<int> a=b;
+  for (i=1;i<a.length;i++)
+  {
+    var temp=a[i];
+    var j=i-1;
+    while(a.length>=0 && a[j]>temp)
+    {
+      a[j+1]=a[j];
+      j=j-1;
+    }
+          a[j+1]=temp;
+    
+    
+  }
+  return a;
+}
