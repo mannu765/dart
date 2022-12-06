@@ -62,7 +62,12 @@ void main() {
 //     print('{key: ${e.key}, value: ${e.value} }');
 //   });
   
-  
+   var a=fruit.map((e){
+//     print(e);
+//     return e;
+    
+//    });
+//  print(a.toList()); 
   
   
 }
