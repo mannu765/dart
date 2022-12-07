@@ -1,0 +1,187 @@
+// AGE UPTO HOW MANY YEARS U GONNA LIVE :)
+// import 'dart:io';
+
+//  void main(){
+//   stdout.write("What is your name");
+//     String? name=stdin.readLineSync();
+
+//     print("hi $name what is your age?");
+//     int age= int.parse(stdin.readLineSync()!);
+//     var y= 100-age;
+//     print("$name you are left with $y years to live");
+// }
+
+
+//Addition of two numbers
+// import 'dart:io';
+// void main(){
+//   print("Enter number 1 ");
+//   int? n1= int.parse(stdin.readLineSync()!);
+
+//   print("Enter number 1 ");
+//   int? n2= int.parse(stdin.readLineSync()!);
+  
+//   var add= n1+n2;
+
+//   print ('addition is $add');
+// }
+
+
+//ODD EVEN
+// import 'dart:io';
+
+// void main(){
+//   print("Enter number 1 ");
+//   int? n1= int.parse(stdin.readLineSync()!);
+//   if(n1%2==0)
+//   {
+//     print("even");
+
+//   }
+//   else{
+//     print("odd");
+//   }
+// }
+
+
+// Listing all elements of list less than 5
+
+// import 'dart:io';
+// void main(){
+//  List<int> a=[1,2,3,4,5,6,7,8,9];
+ 
+
+//  for(var i in a){
+//   if(i<5)
+//   {
+//     print(i);
+    
+//   }
+ 
+//  }
+
+ 
+// }
+
+
+// common elements from different lists
+// import 'dart:io';
+// void main(){
+//  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+//  List<int> b=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+//  List<int> c= [];
+
+//  for (var i in a){
+//   for( var j in b){
+//     if(i==j){
+//       c.add(i);
+
+//     }
+//   }
+//  }
+//  print(c.toList());
+// }
+
+// String Palindrome or Not
+// import 'dart:io';
+
+// void main() {
+  
+//   // stdout.write("Please give a word: ");
+//   // String input = stdin.readLineSync();
+//   String input="madam";
+//   String revInput = input.split('').reversed.join('');
+  
+//   // Ternary operator
+//   input == revInput
+//       ? print("The word is palindrome")
+//       : print("The word is not a palindrome");
+// }
+
+// // Write a Dart code that takes this list and makes a new list that has only the even elements of this list in it.
+// void main(){
+//   List<int> a=[1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+//   List<int> b=[];
+//   for (var i in a){
+//     if(i%2==0){
+//       b.add(i);
+//     }
+    
+//   }
+//   print(b.toList());
+// }
+// MiXin
+
+// mixin Bark {
+//   void bark() => print('Barking');
+// }
+
+// mixin Fly {
+//   void fly() => print('Flying');
+// }
+
+// mixin Crawl {
+//   void crawl() => print('Crawling');
+// }
+// // Creating an Animal class
+// class Animal{
+//   void breathe(){
+//     print("Breathing");
+//   }
+// }
+// // Createing a Dog class, which extends the Animal class 
+// // Bark is the mixin with the method that Dog can implement
+// class Dog extends Animal with Bark {}
+
+// // Creating a Bat class Bat, which extends the Animal class
+// // Fly is the mixin with the method that Bat can implement
+// class Bat extends Animal with Fly {}
+
+// class Snake extends Animal with Crawl{
+//   // Invoking the methods within the display
+//   void display(){
+//     print(".....Snake.....");
+//     breathe();
+//     crawl();
+//   }
+// }
+
+// main() {
+//   var dog = Dog();
+//   dog.breathe();
+//   dog.bark();
+
+//   var snake = Snake();
+//   snake.display();
+
+// }
+
+// Extends
+// class First{
+//   void p(){
+//   print("Nooooooooooo");
+// }}
+// class Second extends First{}
+// void main(){
+//   var obj=First();
+//   obj.p();
+//   var obj2=Second();
+//   obj2.p();
+// }
+// implements
+
+// class First{
+//   void p(){
+//   print("Nooooooooooo");
+// }}
+// class Second extends First{
+//   @override
+//   void p(){
+//   print("YEssssss");
+// }}
+// void main(){
+//   var obj=First();
+//   obj.p();
+//   var obj2=Second();
+//   obj2.p();
+// }
