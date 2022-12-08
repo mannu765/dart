@@ -185,3 +185,80 @@
 //   var obj2=Second();
 //   obj2.p();
 // }
+//Calculator
+import 'dart:io';
+class calculator{
+  void calculate(){
+  int result;
+  print("Enter the first number:");
+  int num1 = int.parse(stdin.readLineSync()!);
+
+  print("Enter the second number:");
+  int num2 = int.parse(stdin.readLineSync()!);
+
+  print("Enter the operation (+, -, *, /):");
+  String? operation = stdin.readLineSync();
+
+  
+  switch (operation) {
+    case "+":
+       result = num1 + num2;
+       print("The result is: $result");
+      break;
+    case "-":
+      result = num1 - num2;
+      print("The result is: $result");
+      break;
+    case "*":
+      result = num1 * num2;
+      print("The result is: $result");
+      break;
+    case "/":
+      result = num1 ~/ num2;
+      print("The result is: $result");
+      break;
+  }
+  repeat();
+  }
+  void repeat(){
+    print("Do you want to continue calculation?Yes/No");
+  String? yn = stdin.readLineSync();
+     if(yn=='Yes'){
+    calculate();
+  }
+  else{
+    print('thank u');
+   
+  }
+  }
+
+}
+void main() {
+  var obj=calculator();
+  obj.calculate();
+  
+  
+ 
+}
+//FEET INCH
+
+import 'dart:io';
+
+
+void main(){
+  print("Enter feet ");
+  int feet=int.parse(stdin.readLineSync()!);
+  print("Enter inch");
+    int inch=int.parse(stdin.readLineSync()!);
+    
+    
+    if(inch>12){
+      print("output is ${feet+(inch~/12)} feet ${inch%12} inch");
+        
+          }
+          else{
+            print("$feet feet $inch inch");
+          }
+          
+          
+}
