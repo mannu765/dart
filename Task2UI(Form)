@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+    debugShowCheckedModeBanner: false,
       home: const MyGridScreen(),
     );
   }
@@ -134,7 +135,8 @@ class _MyGridScreenState extends State<MyGridScreen> {
             children: [
 
               const SizedBox(height: 90),
-              const Icon(Icons.person_outlined, color: Colors.grey, size: 140),
+              // const Icon(Icons.person_outlined, color: Colors.grey, size: 140),
+              FlutterLogo(size: 150,),
               const Text('Welcome to FlutterUIkit',
                   style: TextStyle(color: Colors.green, fontSize: 17)),
               const Text('Sign in to Continue',
@@ -150,6 +152,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                       hintText: 'Enter your name',
                       labelText: 'UserName',
                     ),
+                    textInputAction: TextInputAction.next,
                   ),
                 ),
               ),
@@ -163,7 +166,9 @@ class _MyGridScreenState extends State<MyGridScreen> {
                     decoration: const InputDecoration(
                       hintText: 'Enter your name',
                       labelText: 'Password',
+
                     ),
+                    textInputAction: TextInputAction.done,
                   ),
                 ),
               ),
@@ -181,7 +186,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                 child: const Text('Sign In',style: TextStyle(color: Colors.white),),
                 onPressed: null,
               ),
-              const Text('SIGN UP FOR AN AXXOUNT',
+              const Text('SIGN UP FOR AN ACCOUNT',
                   style: TextStyle(color: Colors.grey, fontSize: 16)),
 
             ],
