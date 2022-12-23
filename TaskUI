@@ -21,131 +21,168 @@ class MyGridScreen extends StatefulWidget {
 }
 
 class _MyGridScreenState extends State<MyGridScreen> {
-  List<String> olors = [
-    'Electricity',
-    'Water',
-    'Mobile',
-    'Landline',
-    'Cable Tv',
-    'Internet'
-  ];
-  List<String> clors = [
-    'Movie',
-    'Event',
-    'Sport',
+  // List<String> olors = [
+  //   'Electricity',
+  //   'Water',
+  //   'Mobile',
+  //   'Landline',
+  //   'Cable Tv',
+  //   'Internet'
+  // ];
+  List olors=[{'name':'Electricity','icon':Icons.search},
+    {'name':'Water','icon':Icons.flash_auto},
+    {'name':'Mobile','icon':Icons.flash_auto},
+    {'name':'Landline','icon':Icons.flash_auto},
+    {'name':'Cable Tv','icon':Icons.flash_auto},
+    {'name':'Internet','icon':Icons.flash_auto},
 
   ];
 
-
+  List clors = [
+      {'name':'Movie','icon':Icons.flash_auto},
+{'name':'Event','icon':Icons.flash_auto},
+{'name':'Sport','icon':Icons.flash_auto},
+  ];
 
   @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        appBar: AppBar(
-          leading: const Icon(Icons.arrow_back),
-          title: Text("Pay"),
-          actions: [
-            const IconButton(
-              color: Colors.green,
-              onPressed: null,
-              icon: Icon(
-                Icons.search,
-                color: Colors.white,
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: const Icon(Icons.arrow_back),
+        title: const Text(
+          "Pay",
+          style:
+              TextStyle(fontFamily: 'Quicksand', fontWeight: FontWeight.w800),
+        ),
+        actions: [
+          const IconButton(
+            color: Colors.green,
+            onPressed: null,
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+          ),
+          // PopupMenuButton(
+          //   color: ,
+          // ),
+          PopupMenuButton(
+            // add icon, by default "3 dot" icon
+            // icon: Icon(Icons.book)
+            itemBuilder: (context) {
+              return const [
+                PopupMenuItem<int>(
+                  value: 0,
+                  child: Text("My Account"),
+                ),
+                PopupMenuItem<int>(
+                  value: 1,
+                  child: Text("Settings"),
+                ),
+                PopupMenuItem<int>(
+                  value: 2,
+                  child: Text("Logout"),
+                ),
+              ];
+            },
+          ),
+        ],
+        backgroundColor: Colors.black,
+      ),
+      // body: const Center(
+      //   heightFactor: 2.50,
+      //   child: Text('Pay Your Bills', style: TextStyle(fontSize: 18),),
+      // )
+      body: Center(
+        child: Stack(
+          children: [
+            Container(
+              padding: EdgeInsets.fromLTRB(150, 10, 10, 10),
+              child: const Text(
+                'Pay Your Bills',
+                style: TextStyle(
+                    fontSize: 19,
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w800),
               ),
             ),
-            // PopupMenuButton(
-            //   color: ,
-            // ),
-            PopupMenuButton(
-              // add icon, by default "3 dot" icon
-              // icon: Icon(Icons.book)
-              itemBuilder: (context) {
-                return const [
-                  PopupMenuItem<int>(
-                    value: 0,
-                    child: Text("My Account"),
+            Container(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10.0,
+                  mainAxisSpacing: 4.0,
+                ),
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 10),
+                itemCount: olors.length,
+                itemBuilder: (context, index) => Container(
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                      color: Colors.grey[400],
+                      borderRadius: BorderRadius.circular(7)),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 30),
+                        Icon(olors[index]['icon'], color: Colors.blue.shade900,size: 30,),
+                        SizedBox(height: 10),
+                        Text(
+                          olors[index]['name'],
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w400, fontSize: 16),
+                        ),
+
+                      ],
+                    ),
+                    
                   ),
-                  PopupMenuItem<int>(
-                    value: 1,
-                    child: Text("Settings"),
+                  
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(140, 315, 10, 10),
+              child: const Text(
+                'Purchase Tickets',
+                style: TextStyle(
+                    fontSize: 19,
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w800),
+              ),
+            ),
+            Container(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10.0,
+                  mainAxisSpacing: 4.0,
+                ),
+                padding: EdgeInsets.fromLTRB(20, 350, 20, 10),
+                itemCount: clors.length,
+                itemBuilder: (context, index) => Container(
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                      color: Colors.grey[400],
+                      borderRadius: BorderRadius.circular(7)),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 30),
+                        Icon(olors[index]['icon'],color: Colors.blue.shade900,size: 30,),
+                        SizedBox(height: 10),
+                        Text(clors[index]['name'],
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 16)),
+
+                      ],
+                    ),
                   ),
-                  PopupMenuItem<int>(
-                    value: 2,
-                    child: Text("Logout"),
-                  ),
-                ];
-              },
+                ),
+              ),
             ),
           ],
-          backgroundColor: Colors.black,
         ),
-        // body: const Center(
-        //   heightFactor: 2.50,
-        //   child: Text('Pay Your Bills', style: TextStyle(fontSize: 18),),
-        // )
-        body: Center(
-          child: Stack(
-            children: [
-              Container(
-                padding: EdgeInsets.fromLTRB(150, 10, 10, 10),
-                child: const Text(
-                  'Pay Your Bills',
-                  style: TextStyle(fontSize: 19),
-                ),
-              ),
-              Container(
-                child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    crossAxisSpacing: 10.0,
-                    mainAxisSpacing: 4.0,
-                  ),
-                  padding: EdgeInsets.fromLTRB(20, 50, 20, 10),
-                  itemCount: olors.length,
-                  itemBuilder: (context, index) => Container(
-                    padding: EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(7)),
-                    child:  Center(
-                      child: Text(olors[index]),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(140, 315, 10, 10),
-                child: const Text(
-                  'Purchase Tickets',
-                  style: TextStyle(fontSize: 19),
-                ),
-              ),
-              Container(
-                child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    crossAxisSpacing: 10.0,
-                    mainAxisSpacing: 4.0,
-                  ),
-                  padding: EdgeInsets.fromLTRB(20, 350, 20, 10),
-                  itemCount: clors.length,
-                  itemBuilder: (context, index) => Container(
-                    padding: EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(7)),
-                    
-                    child:  Center(
-
-                      child: Text(clors[index]),
-
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
+      ),
+    );
+  }
 }
