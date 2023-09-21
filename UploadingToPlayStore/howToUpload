@@ -1,0 +1,57 @@
+Branches
+
+–> Creating a build:
+Android stable released branch - android-features
+iOS stable to be released branch - ios-features
+Current working branch - feat/new-functionality
+
+Android app release steps:
+
+–> Creating a build:
+
+> Increment build version in “AndroidManifest.xml” file
+
+android:versionCode="103" android:versionName="1.0.3"
+
+> Create a .aab file using the following command
+
+tns build android --release --key-store-path ./friendlyforce.keystore --key-store-password kelly@friendlyforce --key-store-alias friendlyforce --key-store-alias-password kelly@friendlyforce --aab --copy-to releasebuild.aab
+
+> Create .apk file from the newly generated .aab file using the following command (Replace the path with the path of the system where the .aab exists)
+
+bundletool build-apks --env.environment="release"
+ --bundle=/Users/webosmotic/Desktop/Projects/mobile/releasebuild.aab --output=release.apks
+
+> Run the generated .apk file in the connected device for testing
+    
+bundletool install-apks --apks=release.apks
+
+–> Upload the created build on the store
+
+
+    1. Go to the following link and select the app with “net.friendlyforce”
+
+https://play.google.com/console/u/1/developers/5991446657693567434/app-list
+
+2. Click on the “Production” tab from the left side menu
+3. Click on the “Create new release” button on the top right corner
+4. Drag-drop/Select the generated “.aab” file in the box “Drop app bundles here to upload”
+5. Enter release notes or click on “Copy from a previous release”
+6. Click on the “Next” button at the bottom right
+7. Review all details and click on the “Roll out” button  
+
+
+iOS app release steps:
+
+Go to the Xcode and click on “mobile” from the left menu
+Go to the “info” tab and update the “Bundle version string (short)” and “Bundle version” to the appropriate version
+Go to Destination > select “Any iOS device”
+Go to Product > archive to create a build
+Once the archive is done, click on “Distribute App” > Next > Upload > Done
+
+This will deploy the app to the testflight, Once the app is available in the test flight, test it thoroughly and then follow the below steps to deploy it to the app store
+
+Click on the + icon beside “iOS App” in the left menu
+Enter the build version name
+Fill in the required info like what’s new, etc. Add new screenshots if there are updates in the old one, select the build from the test flight and click on “submit for review”
+Roll out the review by selection next for all further steps
